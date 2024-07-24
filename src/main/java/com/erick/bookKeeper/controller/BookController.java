@@ -6,10 +6,10 @@ import com.erick.bookKeeper.dto.CadastroBook;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/book")
@@ -21,5 +21,15 @@ public class BookController {
     @Transactional
     public void addBook(@RequestBody @Valid CadastroBook cadastroBook) {
         bookRepository.save(new Book(cadastroBook));
+    }
+
+    @GetMapping
+    public List<Book> findAll() {
+        return bookRepository.findAll();
+    }
+
+    @GetMapping("/{book}")
+    public Optional<Book> findAll(@PathVariable Long book) {
+        return bookRepository.findById(book);
     }
 }
