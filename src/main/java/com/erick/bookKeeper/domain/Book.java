@@ -1,6 +1,8 @@
-package com.erick.bookKeeper.book;
+package com.erick.bookKeeper.domain;
 
 
+import com.erick.bookKeeper.dto.CadastroBook;
+import com.erick.bookKeeper.enums.GeneroLivro;
 import jakarta.persistence.*;
 import lombok.*;
 

@@ -1,10 +1,8 @@
 package com.erick.bookKeeper.controller;
 
-import com.erick.bookKeeper.book.Book;
-import com.erick.bookKeeper.book.CadastroBook;
-import com.erick.bookKeeper.user.CadastroUser;
-import com.erick.bookKeeper.user.User;
-import com.erick.bookKeeper.user.UserRepository;
+import com.erick.bookKeeper.dto.CadastroUser;
+import com.erick.bookKeeper.domain.User;
+import com.erick.bookKeeper.repository.UserRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;

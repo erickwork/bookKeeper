@@ -1,8 +1,8 @@
-package com.erick.bookKeeper.loan;
+package com.erick.bookKeeper.domain;
 
 
-import com.erick.bookKeeper.book.Book;
-import com.erick.bookKeeper.user.User;
+import com.erick.bookKeeper.dto.CadastroLoan;
+import com.erick.bookKeeper.enums.LoanStatus;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -34,7 +34,7 @@ public class Loan {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "status")
-    private Status status;
+    private LoanStatus status;
 
     public Loan(CadastroLoan cadastroLoan) {
 
@@ -43,7 +43,7 @@ public class Loan {
         this.loanDate = cadastroLoan.loanDate();
         this.dueDate = cadastroLoan.dueDate();
         this.returnDate = cadastroLoan.returnDate();
-        this.status = Status.ACTIVE;
+        this.status = LoanStatus.ACTIVE;
 
     }
 }

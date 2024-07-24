@@ -1,4 +1,4 @@
-package com.erick.bookKeeper.book;
+package com.erick.bookKeeper.enums;
 
 public enum GeneroLivro {
     FICCAO,

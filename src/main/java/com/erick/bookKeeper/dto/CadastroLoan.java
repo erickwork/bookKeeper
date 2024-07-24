@@ -1,4 +1,4 @@
-package com.erick.bookKeeper.loan;
+package com.erick.bookKeeper.dto;
 
 import jakarta.validation.constraints.NotNull;
 

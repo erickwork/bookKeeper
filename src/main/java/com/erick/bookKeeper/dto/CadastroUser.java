@@ -1,4 +1,4 @@
-package com.erick.bookKeeper.user;
+package com.erick.bookKeeper.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

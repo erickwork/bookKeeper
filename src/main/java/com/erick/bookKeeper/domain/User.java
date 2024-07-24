@@ -1,6 +1,7 @@
-package com.erick.bookKeeper.user;
+package com.erick.bookKeeper.domain;
 
 
+import com.erick.bookKeeper.dto.CadastroUser;
 import jakarta.persistence.*;
 import lombok.*;
 
